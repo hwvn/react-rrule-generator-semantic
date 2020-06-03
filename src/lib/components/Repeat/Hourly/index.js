@@ -15,7 +15,7 @@ const RepeatHourly = ({
     <label>
       {translateLabel(translations, 'repeat.hourly.every')}
     </label>
-    <Input
+    <Input type='number' min={1}
       style={{ maxWidth: 100, marginRight: '1em' }}
       name="repeat.hourly.interval"
       aria-label="Repeat hourly interval"

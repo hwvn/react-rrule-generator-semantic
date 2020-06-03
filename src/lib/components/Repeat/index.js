@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Dropdown, Form } from 'semantic-ui-react';
+import defaults from 'lodash.defaults';
 
 import RepeatYearly from './Yearly/index';
 import RepeatMonthly from './Monthly/index';
@@ -8,7 +9,6 @@ import RepeatWeekly from './Weekly/index';
 import RepeatDaily from './Daily/index';
 import RepeatHourly from './Hourly/index';
 import translateLabel from '../../utils/translateLabel';
-
 const Repeat = ({
   id,
   repeat: {
@@ -63,7 +63,7 @@ const Repeat = ({
         isOptionSelected('Monthly') &&
         <RepeatMonthly
           id={`${id}-monthly`}
-          monthly={monthly}
+          monthly={defaults(monthly, { interval: 1 })}
           handleChange={handleChange}
           translations={translations}
         />
@@ -72,7 +72,7 @@ const Repeat = ({
         isOptionSelected('Weekly') &&
         <RepeatWeekly
           id={`${id}-weekly`}
-          weekly={weekly}
+          weekly={defaults(weekly, { interval: 1 })}
           handleChange={handleChange}
           translations={translations}
         />
@@ -81,7 +81,7 @@ const Repeat = ({
         isOptionSelected('Daily') &&
         <RepeatDaily
           id={`${id}-daily`}
-          daily={daily}
+          daily={defaults(daily, { interval: 1 })}
           handleChange={handleChange}
           translations={translations}
         />
@@ -90,7 +90,7 @@ const Repeat = ({
         isOptionSelected('Hourly') &&
         <RepeatHourly
           id={`${id}-hourly`}
-          hourly={hourly}
+          hourly={defaults(hourly, { interval: 1 })}
           handleChange={handleChange}
           translations={translations}
         />

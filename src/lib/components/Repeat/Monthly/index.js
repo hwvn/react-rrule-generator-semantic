@@ -28,6 +28,8 @@ const RepeatMonthly = ({
           {translateLabel(translations, 'repeat.monthly.every')}
         </label>
         <Input
+          type='number'
+          min={1}
           style={{ maxWidth: 100, marginRight: '1em' }}
           name="repeat.monthly.interval"
           aria-label="Repeat monthly interval"

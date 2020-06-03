@@ -16,7 +16,7 @@ const RepeatMonthlyOnThe = ({
   const isActive = mode === 'on the';
 
   return (
-    <Form.Group className={classnames({ 'opacity-50': !isActive })}>
+    <Form.Group inline className={classnames({ 'opacity-50': !isActive })}>
       <Form.Field
         control={() => hasMoreModes && (
           <Radio
@@ -74,6 +74,7 @@ const RepeatMonthlyOnThe = ({
             disabled={!isActive}
             name="repeat.monthly.onThe.day"
             aria-label="Repeat monthly on the day"
+            style={{ minWidth: 120 }}
           />
         )}
       />

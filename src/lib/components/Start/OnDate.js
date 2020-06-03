@@ -38,7 +38,7 @@ const StartOnDate = ({
   return (
     <Popup
       trigger={(
-        <Button>
+        <Button basic primary>
           {date}
         </Button>
       )}

@@ -25,7 +25,7 @@ const RepeatWeekly = ({
         <label>
           {translateLabel(translations, 'repeat.weekly.every')}
         </label>
-        <Input
+        <Input type='number' min={1}
           style={{ maxWidth: 100, marginRight: '1em' }}
           name="repeat.weekly.interval"
           aria-label="Repeat weekly interval"

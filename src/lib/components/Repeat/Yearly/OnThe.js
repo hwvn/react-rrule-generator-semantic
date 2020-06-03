@@ -15,7 +15,7 @@ const RepeatYearlyOnThe = ({
   const isActive = mode === 'on the';
 
   return (
-    <Form.Group classnames={{ 'opacity-50': !isActive }}>
+    <Form.Group inline classnames={{ 'opacity-50': !isActive }}>
       <Form.Field
         control={() => hasMoreModes && (
           <Radio
@@ -73,6 +73,7 @@ const RepeatYearlyOnThe = ({
               value: day,
               text: translateLabel(translations, `days.${day.toLowerCase()}`),
             }))}
+            style={{ minWidth: 120 }}
           />
         )}
       />

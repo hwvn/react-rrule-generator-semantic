@@ -20,7 +20,7 @@ const RepeatYearlyOn = ({
   const isActive = mode === 'on';
 
   return (
-    <Form.Group className={classnames({ 'opacity-50': !isActive })}>
+    <Form.Group inline className={classnames({ 'opacity-50': !isActive })}>
       <Form.Field
         control={() => hasMoreModes && (
           <Radio

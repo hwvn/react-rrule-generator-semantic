@@ -39,7 +39,7 @@ const EndOnDate = ({
       control={() => (
         <Popup
           trigger={(
-            <Button>
+            <Button basic primary>
               {date}
             </Button>
           )}

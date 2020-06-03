@@ -33,7 +33,8 @@ const rrule = new RRule({
 
 class App extends Component {
   state = {
-    rrule: rrule.toString(),
+    // rrule: rrule.toString(),
+    rrule: 'FREQ=MONTHLY;BYMONTHDAY=25',
     isCopied: false,
     language: 'en',
   };

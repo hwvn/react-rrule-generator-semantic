@@ -15,7 +15,7 @@ const RepeatDaily = ({
     <label>
       {translateLabel(translations, 'repeat.daily.every')}
     </label>
-    <Input
+    <Input type='number' min={1}
       style={{ maxWidth: 100, marginRight: '1em' }}
       name="repeat.daily.interval"
       aria-label="Repeat daily interval"
